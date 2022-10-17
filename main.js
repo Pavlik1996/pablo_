@@ -17,6 +17,6 @@ function calc(action, a, b) {
   }
 }
 
-alert(calc(Subtract, 3, 2));
+console.log(calc(Subtract, 3, 2));
 console.log(calc(Multi, 1, 2));
 console.log(calc(Add, 1, 2));
