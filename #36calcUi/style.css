@@ -1,0 +1,24 @@
+.calc {
+  display: flex;
+  margin: 50px;
+}
+
+.select {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.btn {
+  margin-left: 5px;
+}
+
+.equal p {
+  display: flex;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+
+.numone form input {
+  box-sizing: border-box;
+  width: 95px;
+}
