@@ -10,29 +10,32 @@
   <body>
     <div class="calc">
       <div class="numone">
-        <form action="">
-          <input type="text" />
+        <form name="one">
+          <input id="inOne" type="number" />
         </form>
       </div>
       <div class="select">
-        <select name="" id="">
-          <option value="">+</option>
-          <option value="">-</option>
-          <option value="">*</option>
-          <option value="">/</option>
+        <select name="" id="oper">
+          <option value=""></option>
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
         </select>
       </div>
       <div class="numone">
         <form action="">
-          <input type="text" />
+          <input id="inTwo" type="number" />
         </form>
       </div>
       <div class="btn">
-        <button>=</button>
+        <button id="btn">=</button>
       </div>
       <div class="equal">
-        <p>10</p>
+        <p></p>
       </div>
+      <div class="calc-screen"></div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

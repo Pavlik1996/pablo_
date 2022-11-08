@@ -22,3 +22,6 @@
   box-sizing: border-box;
   width: 95px;
 }
+.calc-screen {
+  display: flex;
+}
