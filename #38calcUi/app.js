@@ -1,17 +1,7 @@
 // Ошибки
-const ERROR = {
-  DIVIDE_ZERO: "Нельзя делить на ноль",
-  NO_DIGIT: "Введите числа",
-};
+import { ERROR } from "./error.js";
 // Оператор
-const ACTION = {
-  ADDITION: "+",
-  SUBTRACTION: "-",
-  MULTIPLY: "*",
-  DIVIDE: "/",
-};
-
-const button = document.getElementById("btn");
+import { ACTION } from "./error.js";
 //Логика калькулятора
 document.getElementById("btn").onclick = function () {
   const numOne = document.getElementById("inOne").value; // Первое число
