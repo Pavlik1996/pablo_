@@ -1,37 +1,57 @@
+// Ошибки
 const ERROR = {
-  NO_OPERATOR: "Выберите оператор",
   DIVIDE_ZERO: "Нельзя делить на ноль",
   NO_DIGIT: "Введите числа",
 };
-document.getElementById("btn").onclick = function () {
-  const a = document.getElementById("inOne").value;
-  const b = document.getElementById("inTwo").value;
-  const operator = document.getElementById("oper").value;
-  const out = document.querySelector(".equal p");
+// Оператор
+const ACTION = {
+  ADDITION: "+",
+  SUBTRACTION: "-",
+  MULTIPLY: "*",
+  DIVIDE: "/",
+};
 
-  if (a !== "" && b !== "") {
+const button = document.getElementById("btn");
+//Логика калькулятора
+document.getElementById("btn").onclick = function () {
+  const numOne = document.getElementById("inOne").value; // Первое число
+  const numTwo = document.getElementById("inTwo").value; // Второе число
+  const operator = document.querySelector(".oper").value; // Выбранный оператор
+  const out = document.querySelector(".equal p"); // Значение
+  if (!numOne || !numTwo) {
+    // Нет числа
+    out.textContent = ERROR.NO_DIGIT;
+  } else {
     switch (operator) {
-      case "":
-        out.textContent = ERROR.NO_OPERATOR;
+      case ACTION.ADDITION:
+        let result = +numOne + +numTwo;
+        out.textContent = +result.toFixed(3); // 0.1 + 0.3 // 1.35 + 6.35
         break;
-      case "+":
-        out.textContent = +a + +b;
+      case ACTION.SUBTRACTION:
+        out.textContent = +numOne - +numTwo;
         break;
-      case "-":
-        out.textContent = a - b;
+      case ACTION.MULTIPLY:
+        out.textContent = +numOne * +numTwo;
         break;
-      case "*":
-        out.textContent = a * b;
-        break;
-      case "/":
-        if (b === "0") {
-          out.textContent = ERROR.DIVIDE_ZERO;
+      case ACTION.DIVIDE:
+        if (+numTwo === 0) {
+          out.textContent = ERROR.DIVIDE_ZERO; // Деление на ноль
           return;
         }
-        out.textContent = a / b;
+        out.textContent = +numOne / +numTwo;
         break;
     }
-  } else {
-    out.textContent = ERROR.NO_DIGIT;
   }
+
+  let div = document.createElement("div");
+  div.className = "showresult";
+  div.textContent = +out.textContent;
+  document.body.append(div);
+
+  const result = document.querySelectorAll(".showresult");
+  result.forEach((el) => {
+    el.onclick = () => {
+      el.remove();
+    };
+  });
 };
