@@ -1,52 +1,58 @@
 body {
+  height: 100vh;
   font-family: "Source Sans Pro", sans-serif;
-  background-color: antiquewhite;
+  background: linear-gradient(70deg, #8bc7ff, #befca6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.blokone {
+h1 {
+  color: rgba(39, 59, 175, 0.514);
+}
+
+.blokUs {
+  font-weight: 700;
   padding: 5px;
   display: flex;
   border: 1px solid black;
   border-radius: 6px;
   margin-bottom: 8px;
 }
-.blokone input {
+
+.blokUs label {
+  width: 435px;
+  display: flex;
+}
+
+.blokadd {
+  padding: 5px;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.blokadd input {
   border: 0px;
+  outline: none;
+  width: 400px;
+  background: linear-gradient(70deg, #ffdbdb, #e3e3ff);
 }
 
-.bloktwo {
-  padding: 5px;
+.blokadd label {
+  width: 435px;
   display: flex;
-  border: 1px solid black;
-  border-radius: 6px;
-  margin-bottom: 8px;
-}
-
-.bloktwo input {
-  margin: 5px;
-}
-
-.bloktwo p {
-  display: flex;
-}
-
-.blokthree {
-  padding: 5px;
-  display: flex;
-  border: 1px solid black;
-  border-radius: 6px;
-  margin-bottom: 8px;
-}
-
-.blokthree input {
-  border: 0;
 }
 
 .todoall {
+  background: linear-gradient(70deg, #ffdbdb, #e3e3ff);
+  margin-top: 40px;
+  border-radius: 15px;
   width: 475px;
   border: 1px solid black;
-  background-color: #ffffff;
   padding: 15px;
+  box-shadow: 10px 10px 5px #808080;
 }
 
 .priority {
@@ -58,31 +64,14 @@ body {
   justify-content: center;
 }
 
-.lineone {
-  position: absolute;
-  width: 18.01px;
-  height: 0px;
-  border: 1px solid #998899;
-  transform: matrix(1, 0, 0.08, 1, 0, 0);
+.button {
+  font-weight: 800;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.4s;
+  user-select: none;
 }
 
-.line {
-  display: flex;
-  margin-top: 7.5px;
-  align-items: center;
-  margin-left: 270px;
-}
-
-.line3 {
-  align-items: center;
-  padding-left: 250px;
-}
-
-.linetwo {
-  position: absolute;
-  width: 18.04px;
-  height: 0px;
-
-  border: 1px solid #998899;
-  transform: matrix(-0.02, -1, 1, 0.05, 0, 0);
+.button:hover {
+  transform: scale(2);
 }
