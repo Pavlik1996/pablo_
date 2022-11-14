@@ -1,0 +1,88 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: antiquewhite;
+}
+
+.blokone {
+  padding: 5px;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.blokone input {
+  border: 0px;
+}
+
+.bloktwo {
+  padding: 5px;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.bloktwo input {
+  margin: 5px;
+}
+
+.bloktwo p {
+  display: flex;
+}
+
+.blokthree {
+  padding: 5px;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.blokthree input {
+  border: 0;
+}
+
+.todoall {
+  width: 475px;
+  border: 1px solid black;
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+.priority {
+  display: flex;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  justify-content: center;
+}
+
+.lineone {
+  position: absolute;
+  width: 18.01px;
+  height: 0px;
+  border: 1px solid #998899;
+  transform: matrix(1, 0, 0.08, 1, 0, 0);
+}
+
+.line {
+  display: flex;
+  margin-top: 7.5px;
+  align-items: center;
+  margin-left: 270px;
+}
+
+.line3 {
+  align-items: center;
+  padding-left: 250px;
+}
+
+.linetwo {
+  position: absolute;
+  width: 18.04px;
+  height: 0px;
+
+  border: 1px solid #998899;
+  transform: matrix(-0.02, -1, 1, 0.05, 0, 0);
+}
